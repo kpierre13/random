@@ -1,11 +1,7 @@
-version 1.0
+import "sub.wdl" as sub
 
-import "subworkflow.wdl" as sub
-
-workflow subworkflow_input {
-  call sub.subwf { input:
-    i = 5,
-    j = 10,
-    k = 15
+workflow wf {
+  scatter (i in range(2)) {
+    call sub.wf
   }
 }
