@@ -3,6 +3,9 @@ task hello {
   command {
     echo "Hello ${addressee}!"
   }
+  runtime {
+    docker: "ubuntu:latest"
+  }
   output {
     String salutation = read_string(stdout())
   }
@@ -11,6 +14,9 @@ task goodbye {
   String addressee
   command {
     echo "Goodbye ${addressee}!"
+  }
+  runtime {
+    docker: "ubuntu:latest"
   }
   output {
     String salutation = read_string(stdout())
