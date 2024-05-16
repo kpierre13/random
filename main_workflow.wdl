@@ -4,10 +4,6 @@ task test_equality {
     command {
       echo "hi!"
     }
-
-    meta {
-      volatile: true
-    }
   
     runtime {
       docker: "ubuntu:latest"
