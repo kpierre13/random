@@ -5,12 +5,6 @@ task test_equality {
       echo "hi!"
     }
 
-    Array[Pair[String, Int]] test = [ (1, 1), ("two", 2), ("three", 3) ]
-
-    output {
-      Array[Pair[String, Int]] testOut = test
-    }
-
     meta {
       volatile: true
     }
@@ -28,7 +22,6 @@ workflow main_workflow {
     # call myTask { input: hello_and_goodbye.hello_output }
     
     output {
-        Array[Pair[String, Int]] s1 = test_equality.testOut
         String main_output = hello_and_goodbye.hello_output
     }
 }
