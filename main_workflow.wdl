@@ -4,10 +4,8 @@ task test_equality {
     command {
       echo "hi!"
     }
-  
     runtime {
       docker: "ubuntu:latest"
-      maxRetries: 5
     }
 }
 
