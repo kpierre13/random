@@ -1,23 +1,24 @@
 import "sub_wdl.wdl" as sub
 
 task test_equality {
-  command {
-    echo "hi!"
-  }
-  Array[Pair[String, Int]] test = [ (1, 1), ("two", 2), ("three", 3) ]
+    command {
+      echo "hi!"
+    }
 
-  output {
-    Array[Pair[String, Int]] testOut = test
-  }
+    Array[Pair[String, Int]] test = [ (1, 1), ("two", 2), ("three", 3) ]
 
-  meta {
-    volatile: true
-  }
+    output {
+      Array[Pair[String, Int]] testOut = test
+    }
+
+    meta {
+      volatile: true
+    }
   
-  runtime {
-    docker: "ubuntu:latest"
-    maxRetries: 5
-  }
+    runtime {
+      docker: "ubuntu:latest"
+      maxRetries: 5
+    }
 }
 
 workflow main_workflow {
