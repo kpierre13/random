@@ -1,9 +1,9 @@
 task test_equality {
+  Array[Pair[String, Int]] test = [ (1, 1), ("two", 2), ("three", 3) ]
 
   command {
     echo "hi!"
   }
-  Array[Pair[String, Int]] test = [ (1, 1), ("two", 2), ("three", 3) ]
 
   output {
       Array[Pair[String, Int]] testOut = test
