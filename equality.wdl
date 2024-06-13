@@ -23,8 +23,9 @@ task test_equality {
 }
 
 workflow eqality_testing {
-  call test_equality
-  output {
-    Array[Pair[String, Int]] s1 = test_equality.testOut
-  }
+    call test_equality
+
+    output {
+        Array[Pair[String, Int]] s1 = test_equality.testOut
+    }
 }
