@@ -1,3 +1,5 @@
+import "equality.wdl" as equal
+
 task hello {
   String addressee
   command {
@@ -26,7 +28,8 @@ workflow hello_and_goodbye {
   String hello_and_goodbye_input
   
   call hello {input: addressee = hello_and_goodbye_input }
-  call goodbye {input: addressee = hello_and_goodbye_input }
+  call goodbye {input: addressee = hello_and_goodbye_input 
+  call equal.eqality_testing
   
   output {
     String hello_output = hello.salutation
