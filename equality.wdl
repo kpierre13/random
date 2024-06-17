@@ -17,7 +17,7 @@ task test_equality {
 
 workflow eqality_testing {
   call test_equality
-  call three.task_3_from_main
+  call three.3_from_main
 
   output {
     Array[Pair[String, Int]] s1 = test_equality.testOut
