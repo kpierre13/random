@@ -1,3 +1,5 @@
+import "3_from_main" as three
+
 task test_equality {
   Array[Pair[String, Int]] test = [ (1, 1), ("two", 2), ("three", 3) ]
 
@@ -15,6 +17,7 @@ task test_equality {
 
 workflow eqality_testing {
   call test_equality
+  call three.task_3_from_main
 
   output {
     Array[Pair[String, Int]] s1 = test_equality.testOut
