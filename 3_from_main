@@ -11,5 +11,5 @@ task task_3_from_main {
 }
 
 workflow 3_from_main {
-  call four.task_4_from_main
+  call four.4_from_main
 }
