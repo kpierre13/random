@@ -8,6 +8,6 @@ task task_4_from_main {
   }
 }
 
-workflow 4_from_main {
+workflow four_from_main {
   call task_4_from_main
 }
