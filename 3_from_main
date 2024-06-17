@@ -1,0 +1,15 @@
+import "4_from_main" as four
+
+task task_3_from_main {
+  String addressee
+  command {
+    echo "Hello ${addressee}!"
+  }
+  runtime {
+    docker: "ubuntu:latest"
+  }
+}
+
+workflow 3_from_main {
+  call four.task_4_from_main
+}
