@@ -1,7 +1,7 @@
 task task_4_from_main {
-  String addressee
+  String? addressee
   command {
-    echo "Hello ${addressee}!"
+    echo "Hello you!" ## revert
   }
   runtime {
     docker: "ubuntu:latest"
