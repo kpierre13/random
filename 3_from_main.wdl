@@ -1,4 +1,4 @@
-import "4_from_main" as four
+import "4_from_main.wdl" as four
 
 task task_3_from_main {
   String addressee
